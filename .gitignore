@@ -2,6 +2,7 @@
 *out
 .ipynb_checkpoints
 */.ipynb_checkpoints/*
+__pycache__/
 
 # User-specific stuff
 .idea/**/workspace.xml
