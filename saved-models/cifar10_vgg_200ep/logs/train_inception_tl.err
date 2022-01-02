@@ -1,0 +1,26 @@
+ plgrid/tools/binutils/2.34 loaded.
+ plgrid/tools/gcc/9.3.0 loaded.
+ plgrid/tools/intel/19.1.1 loaded.
+ plgrid/tools/impi/2018.5 loaded.
+ plgrid/libs/hdf5/1.12.0 loaded.
+ plgrid/libs/mkl/2020.0.1 loaded.
+ plgrid/libs/icu/61.1 loaded.
+ plgrid/libs/boost/1.73.0-python-3.8 loaded.
+ plgrid/tools/swig/4.0.1 loaded.
+ plgrid/libs/libxc/5.0.0 loaded.
+ plgrid/tools/tcltk//8.6.10 loaded.
+ plgrid/apps/cuda/11.2 loaded.
+    *********************** IMPORTANT / LICENSING INFORMATION
+****************************
+    By using plgrid/libs/cudnn/8.1.1-cuda-11.2 module you accept NVIDIA cuDNN
+SLA
+    available at https://docs.nvidia.com/deeplearning/cudnn/sla/index.html
+    *********************** IMPORTANT / LICENSING INFORMATION
+**************************** 
+ plgrid/libs/cudnn/8.1.1-cuda-11.2 loaded.
+ plgrid/tools/python/3.9 loaded.
+2022-01-01 17:08:17.399720: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2022-01-01 17:08:17.946190: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1510] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 30995 MB memory:  -> device: 0, name: Tesla V100-SXM2-32GB, pci bus id: 0000:89:00.0, compute capability: 7.0
+2022-01-01 17:08:19.649565: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:185] None of the MLIR Optimization Passes are enabled (registered 2)
+2022-01-01 17:08:20.636988: I tensorflow/stream_executor/cuda/cuda_dnn.cc:369] Loaded cuDNN version 8101
