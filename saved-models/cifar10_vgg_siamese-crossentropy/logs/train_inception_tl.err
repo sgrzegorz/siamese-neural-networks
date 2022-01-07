@@ -1,0 +1,56 @@
+ plgrid/tools/binutils/2.34 loaded.
+ plgrid/tools/gcc/9.3.0 loaded.
+ plgrid/tools/intel/19.1.1 loaded.
+ plgrid/tools/impi/2018.5 loaded.
+ plgrid/libs/hdf5/1.12.0 loaded.
+ plgrid/libs/mkl/2020.0.1 loaded.
+ plgrid/libs/icu/61.1 loaded.
+ plgrid/libs/boost/1.73.0-python-3.8 loaded.
+ plgrid/tools/swig/4.0.1 loaded.
+ plgrid/libs/libxc/5.0.0 loaded.
+ plgrid/tools/tcltk//8.6.10 loaded.
+ plgrid/apps/cuda/11.2 loaded.
+    *********************** IMPORTANT / LICENSING INFORMATION
+****************************
+    By using plgrid/libs/cudnn/8.1.1-cuda-11.2 module you accept NVIDIA cuDNN
+SLA
+    available at https://docs.nvidia.com/deeplearning/cudnn/sla/index.html
+    *********************** IMPORTANT / LICENSING INFORMATION
+**************************** 
+ plgrid/libs/cudnn/8.1.1-cuda-11.2 loaded.
+ plgrid/tools/python/3.9 loaded.
+2022-01-02 01:06:47.457534: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2022-01-02 01:06:47.990796: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1510] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 30995 MB memory:  -> device: 0, name: Tesla V100-SXM2-32GB, pci bus id: 0000:15:00.0, compute capability: 7.0
+2022-01-02 01:07:02.821944: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:185] None of the MLIR Optimization Passes are enabled (registered 2)
+2022-01-02 01:07:04.094327: I tensorflow/stream_executor/cuda/cuda_dnn.cc:369] Loaded cuDNN version 8101
+Traceback (most recent call last):
+  File "/net/people/plgsgrzegorz/gpu/scripts/train.py", line 123, in <module>
+    model.save('model.h5')
+  File "/net/software/local/python/3.9/lib/python3.9/site-packages/keras/engine/training.py", line 2145, in save
+    save.save_model(self, filepath, overwrite, include_optimizer, save_format,
+  File "/net/software/local/python/3.9/lib/python3.9/site-packages/keras/saving/save.py", line 145, in save_model
+    hdf5_format.save_model_to_hdf5(
+  File "/net/software/local/python/3.9/lib/python3.9/site-packages/keras/saving/hdf5_format.py", line 110, in save_model_to_hdf5
+    model_metadata = saving_utils.model_metadata(model, include_optimizer)
+  File "/net/software/local/python/3.9/lib/python3.9/site-packages/keras/saving/saving_utils.py", line 145, in model_metadata
+    model_config['config'] = model.get_config()
+  File "/net/software/local/python/3.9/lib/python3.9/site-packages/keras/engine/functional.py", line 643, in get_config
+    return copy.deepcopy(get_network_config(self))
+  File "/net/software/local/python/3.9/lib/python3.9/site-packages/keras/engine/functional.py", line 1349, in get_network_config
+    layer_config = serialize_layer_fn(layer)
+  File "/net/software/local/python/3.9/lib/python3.9/site-packages/keras/utils/generic_utils.py", line 503, in serialize_keras_object
+    config = instance.get_config()
+  File "/net/software/local/python/3.9/lib/python3.9/site-packages/keras/engine/functional.py", line 643, in get_config
+    return copy.deepcopy(get_network_config(self))
+  File "/net/software/local/python/3.9/lib/python3.9/site-packages/keras/engine/functional.py", line 1365, in get_network_config
+    model_inputs = tf.nest.pack_sequence_as(network._nested_inputs, model_inputs)
+  File "/net/software/local/python/3.9/lib/python3.9/site-packages/tensorflow/python/util/nest.py", line 757, in pack_sequence_as
+    return _pack_sequence_as(structure, flat_sequence, expand_composites)
+  File "/net/software/local/python/3.9/lib/python3.9/site-packages/tensorflow/python/util/nest.py", line 623, in _pack_sequence_as
+    raise ValueError(
+ValueError: The target structure is of type `<class 'keras.engine.keras_tensor.KerasTensor'>`
+  KerasTensor(type_spec=TensorSpec(shape=(None, 32, 32, 3), dtype=tf.float32, name='input_3'), name='i...
+However the input structure is a sequence (<class 'list'>) of length 0.
+  []
+nest cannot guarantee that it is safe to map one to the other.
