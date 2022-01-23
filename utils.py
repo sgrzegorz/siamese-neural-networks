@@ -61,9 +61,12 @@ def full_evaluate(model, X, y):
     return results
 
 
-def full_evaluate_differencing(model, X, y):
+def full_evaluate_differencing(model, X, y, siamese=False):
     results = {}
-    y_pred = np.argmax(model.predict(X), 1)
+    if siamese:
+        y_pred = np.argmax(model.predict([X, X]), 1)
+    else:
+        y_pred = np.argmax(model.predict(X), 1)
     acc = 0
     c_m = None
     flag = True
@@ -93,4 +96,4 @@ def full_evaluate_differencing(model, X, y):
     
     results['f1_score'] = f1(c_m)
     print('F1-score:', f1(c_m))
-    return {}
+    return results
